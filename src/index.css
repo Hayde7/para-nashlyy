@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Valentín</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:#fdeaea;
+  text-align:center;
+  color:#333;
+}
+
+.screen{
+  min-height:100vh;
+  padding:30px 20px;
+  display:none;
+}
+
+.screen.active{
+  display:block;
+}
+
+h1{
+  color:#e84b4b;
+}
+
+button{
+  background:#e84b4b;
+  color:white;
+  border:none;
+  padding:14px 30px;
+  border-radius:30px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.button-gray{
+  background:#ddd;
+  color:#555;
+}
+
+.card{
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  margin-top:20px;
+}
+
+.photos{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.photo{
+  background:white;
+  padding:10px;
+  border-radius:10px;
+}
+
+.photo img{
+  width:100%;
+  border-radius:5px;
+}
+
+.heart{
+  font-size:40px;
+}
+
+img{
+  max-width:100%;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PANTALLA 1 -->
+<div class="screen active" id="s1">
+  <h1>Nash, ¡Feliz Día de San Valentín!</h1>
+  <div class="heart">❤️</div>
+  <div class="tenor-gif-embed" data-postid="10000605937555107357" data-share-method="host" data-aspect-ratio="3" data-width="100%"><a href="https://tenor.com/view/kitty-cat-cat-in-love-in-love-cat-happy-gif-10000605937555107357">Kitty Cat Meme</a>from <a href="https://tenor.com/search/kitty-memes">Kitty Memes</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <p></p>
+  <p><b>aprieta cariño!!! (っ◔◡◔)っ❤️</b></p>
+  <button onclick="next(2)">Siguiente!! ^w^</button>
+</div>
+
+<!-- PANTALLA 2 -->
+<div class="screen" id="s2">
+  <h1>Recuerditos 💗</h1>
+  <div class="photos">
+    
+    <img src="https://cdn.discordapp.com/attachments/1391172581402349660/1470906928732438791/image.png?ex=698d0053&is=698baed3&hm=226ac1b6985b15897398494e6206be478c5811c8e210720c9b0d80a60e0bd5d1"></d>
+    <img src="https://cdn.discordapp.com/attachments/1391172581402349660/1470907102007398579/image.png?ex=698d007d&is=698baefd&hm=6eb29c36d19ff909afd5c764736b3daad17ae2ad09791c573c57e2251c78b347"></d>
+    
+  </div>
+  <br>
+  <button onclick="next(3)">Siguiente →</button>
+</div>
+
+<!-- PANTALLA 3 -->
+<div class="screen" id="s3">
+  <h1>🎵 Una canción solo para vos</h1>
+
+  <!-- VIDEO -->
+  <iframe 
+    src="https://www.youtube.com/embed/9wiEM0s4aCQ"
+    allowfullscreen>
+  </iframe>
+
+  <div class="card">
+    <p><b>Cuco – Lover Is a Day</b></p>
+    <p>Esta canción siempre me hace acordar a vos</p>
+    <p>https://www.youtube.com/watch?v=9wiEM0s4aCQ</p>
+  </div>
+
+  <button onclick="next(4)">Siguiente →</button>
+</div>
+<!-- PANTALLA 4 -->
+<div class="screen" id="s4">
+  <div class="tenor-gif-embed" data-postid="22256248" data-share-method="host" data-aspect-ratio="3" data-width="100%"><a href="https://tenor.com/view/raf-rafs-rafs84-rafsdesign-mail-gif-22256248">Raf Rafs Sticker</a>from <a href="https://tenor.com/search/raf-stickers">Raf Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <h2>Te escribí una carta…</h2>
+  <button onclick="next(5)">Siguiente →</button>
+</div>
+
+<!-- PANTALLA 5 -->
+<div class="screen" id="s5">
+  <h2>¿Querés abrirla?  (≧▽≦)</h2>
+  <div class="tenor-gif-embed" data-postid="3082793379085604256" data-share-method="host" data-aspect-ratio="3" data-width="100%"><a href="https://tenor.com/view/cat-orange-cat-stare-cute-gif-3082793379085604256">Cat Orange Cat GIF</a>from <a href="https://tenor.com/search/cat-gifs">Cat GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <br><br>
+  <button onclick="next(6)">Abrir</button>
+  <button class="button-gray">No gracias</button>
+</div>
+
+<!-- PANTALLA 6 -->
+<div class="screen" id="s6">
+  <h1>feliz san valentín amor</h1>
+  <div class="heart">❤️❤️❤️</div>
+
+  <div class="card" style="text-align:left">
+    <p>
+       Feliz San Valentín 💕
+
+Este San Valentín quiero que sepas que ocupás un lugar muy importante en mi corazón. Que me importa lo que sentís, lo que pensás y lo que sos. Gracias por aparecer en mi vida y por hacerla un poquito más linda todos los días.
+    </p>
+  </div>
+</div>
+
+<script>
+function next(n){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById('s'+n).classList.add('active');
+}
+</script>
+
+</body>
+</html>
